@@ -4,34 +4,34 @@
 -->
 
 <dom-module id="main-app">
-  <style>
+  <style is="custom-style">
     :host {
       display: block;
     }
 
     header {
-      background-color: var(--background-color, lightgoldenrodyellow);
+      background-color: --background-color;
       padding: 1rem;
       font-size: 2rem;
       line-height: 3rem;
     }
 
     h1 {
-      color: var(--brand-color, blue);
+      color: --brand-color;
     }
 
     .highlight {
-      color: var(--primary-color, black);
+      color: --primary-color;
     }
 
     #profile-image {
-      width: var(--profile-image-width);
-      height: var(--profile-image-height);
+      width: --profile-image-width;
+      height: --profile-image-height;
     }
 
     #banner-image {
-      width: var(--banner-image-width);
-      height: var(--banner-image-height);
+      width: --banner-image-width;
+      height: --banner-image-height;
     }
   </style>
 
@@ -44,9 +44,9 @@
       </div>
     </header>
     <p class="lead">
-      This application demonstrates how to use shared styles across multiple <b class="hightlight">Polymer elements</b>
+      This application demonstrates how to use shared styles across multiple <b class="highlight">Polymer elements</b>
       with <b class="highlight">Dart</b>.
-      The purpose is to build complex styling without <b class="hightlight">SASS</b> and maintain the Polymer
+      The purpose is to build complex styling without <b class="highlight">SASS</b> and maintain the Polymer
       encapsulation.
     </p>
 

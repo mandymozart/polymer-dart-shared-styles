@@ -6,14 +6,18 @@ library polymer_dart_shared_styles.lib.shared_styles;
 import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart';
 
-import 'package:polymer_dart_shared_styles/base_elements/colors/colors.dart';
+import 'package:polymer_dart_shared_styles/base_elements/app_colors/app_colors.dart';
 import 'package:polymer_dart_shared_styles/base_elements/image_sizes/image_sizes.dart';
 
 /// Shared Styles imports all styles used in the App. This is equivalent to your
 /// main SCSS or CSS file.
 
-/// Uses [Colors], [ImageSizes]
+/// Uses [AppColors], [ImageSizes]
 @PolymerRegister('shared-styles')
 class SharedStyles extends PolymerElement {
   SharedStyles.created() : super.created();
+
+  attached(){
+    print('Attached [SharedStyles]');
+  }
 }

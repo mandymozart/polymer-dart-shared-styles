@@ -11,4 +11,9 @@ import 'package:web_components/web_components.dart';
 @PolymerRegister('image-sizes')
 class ImageSizes extends PolymerElement {
   ImageSizes.created() : super.created();
+
+  ready(){
+    print('ImageSizes loaded');
+  }
+
 }

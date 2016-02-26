@@ -7,5 +7,6 @@ import 'package:polymer/polymer.dart';
 
 /// [MainApp] used!
 main() async {
+  print('Initialize Main Polymer App');
   await initPolymer();
 }
