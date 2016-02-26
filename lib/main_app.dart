@@ -1,27 +1,19 @@
-// Copyright (c) 2016, <your name>. All rights reserved. Use of this source code
+// Copyright (c) 2016, <WEAREPICTURES>. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 @HtmlImport('main_app.html')
 library polymer_dart_shared_styles.lib.main_app;
 
-import 'dart:html';
-
-import 'package:polymer_elements/paper_input.dart';
 import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart';
 
-/// Uses [PaperInput]
+import 'package:polymer_dart_shared_styles/base_elements/shared_styles/shared_styles.dart';
+
+
+/// Uses [SharedStyles]
 @PolymerRegister('main-app')
 class MainApp extends PolymerElement {
-  @property
-  String text;
-
   /// Constructor used to create instance of MainApp.
   MainApp.created() : super.created();
-
-  @reflectable
-  String reverseText(String text) {
-    return text.split('').reversed.join('');
-  }
 
   // Optional lifecycle methods - uncomment if needed.
 

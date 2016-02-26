@@ -1,8 +1,8 @@
 name: 'polymer_dart_shared_styles'
 version: 0.0.1
-description: A web app built using polymer.dart.
-#author: Your Name <email@example.com>
-#homepage: https://www.example.com
+description: A web app built using polymer.dart.shared_styles
+#author: Danny Develop <dannydevelop@wearepictures.com>
+#homepage: https://www.wearepictures.com
 
 environment:
   sdk: '>=1.9.0 <2.0.0'

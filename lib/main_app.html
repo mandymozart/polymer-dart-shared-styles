@@ -1,5 +1,5 @@
 <!--
-  Copyright (c) 2016, <your name>. All rights reserved. Use of this source code
+  Copyright (c) 2016, <WEAREPICTURES>. All rights reserved. Use of this source code
   is governed by a BSD-style license that can be found in the LICENSE file.
 -->
 
@@ -8,13 +8,47 @@
     :host {
       display: block;
     }
+
+    header {
+      background-color: var(--background-color, lightgoldenrodyellow);
+      padding: 1rem;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+
+    h1 {
+      color: var(--brand-color, blue);
+    }
+
+    .highlight {
+      color: var(--primary-color, black);
+    }
+
+    #profile-image {
+      width: var(--profile-image-width);
+      height: var(--profile-image-height);
+    }
+
+    #banner-image {
+      width: var(--banner-image-width);
+      height: var(--banner-image-height);
+    }
   </style>
 
   <template>
-    <paper-input label="Type something..." value="{{text}}"></paper-input>
-    <p>
-      Text: <span>{{text}}</span><br />
-      Reversed: <span>{{reverseText(text)}}</span>
+    <header>
+      <img id="banner-image" src="http://placehold.it/1920x1080/ffeedd?text=Banner"/>
+      <div class="overlay">
+        <h1>Polymer Dart with Shared Styles</h1>
+        <img id="profile-image" src="http://placehold.it/360?text=Profile"/>
+      </div>
+    </header>
+    <p class="lead">
+      This application demonstrates how to use shared styles across multiple <b class="hightlight">Polymer elements</b>
+      with <b class="highlight">Dart</b>.
+      The purpose is to build complex styling without <b class="hightlight">SASS</b> and maintain the Polymer
+      encapsulation.
     </p>
+
   </template>
 </dom-module>
