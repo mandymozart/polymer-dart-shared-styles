@@ -4,7 +4,6 @@
 library polymer_dart_shared_styles.lib.image_sizes;
 
 import 'package:polymer/polymer.dart';
-import 'package:web_components/web_components.dart';
 
 /// Import default image sizes from a global config
 
@@ -12,8 +11,8 @@ import 'package:web_components/web_components.dart';
 class ImageSizes extends PolymerElement {
   ImageSizes.created() : super.created();
 
-  ready(){
-    print('ImageSizes loaded');
+  attached(){
+    print('Attached [ImageSizes]');
   }
 
 }

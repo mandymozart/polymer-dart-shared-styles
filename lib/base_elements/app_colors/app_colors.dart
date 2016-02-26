@@ -11,4 +11,9 @@ import 'package:web_components/web_components.dart';
 @PolymerRegister('app-colors')
 class AppColors extends PolymerElement {
   AppColors.created() : super.created();
+
+  attached(){
+    print('Attached [AppColors]');
+  }
+
 }
