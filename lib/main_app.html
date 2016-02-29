@@ -2,85 +2,48 @@
   Copyright (c) 2016, <WEAREPICTURES>. All rights reserved. Use of this source code
   is governed by a BSD-style license that can be found in the LICENSE file.
 -->
-<!--<link rel="import" href="image_sizes/image_sizes.html" />-->
 
 <dom-module id="main-app">
-  <style is="custom-style">
-    :host {
-      display: block;
-      --host-visible: block;
-    }
-
-    :root {
-      --root-visible: block;
-    }
-
-    section {
-      padding: .75rem;
-    }
-
-    header {
-      background-color: var(--background-color);
-    }
-
-    h1 {
-      color: var(--brand-color);
-    }
-
-    .highlight {
-      color: var(--primary-color);
-    }
-
-    #profile-image {
-      width: var(--profile-image-width);
-      height: var(--profile-image-height);
-    }
-
-    #banner-image {
-      width: var(--banner-image-width);
-      height: var(--banner-image-height);
-    }
-
-    /* Scope Indicators for testing local dom, shadow dom, shaddy dom */
-    .scope-indicator img {
-      width: 2rem;
-    }
-
-    #host {
-      display: var(--host-visible, none);
-    }
-
-    #root {
-      display: var(--root-visbible, none);
-    }
-
-    /* Mixins */
-    :host {
-      --button-test: {
-        border: 3px solid lightblue;
-        border-radius: 3px;
-        line-height: 2rem;
-        font-size: 0.5rem;
-        color: white;
-        outline: none;
-        text-transform: uppercase;
-        cursor: pointer;
-      };
-    }
-
-    /* Mixin Tests */
-    button {
-      @apply(--button-test);
-      background: limegreen;
-    }
-    button:hover {
-      @apply(--button-test);
-      background: greenyellow;
-    }
-  </style>
 
   <template>
-    <shared-styles></shared-styles>
+    <style>
+      :host {
+        display: block;
+        --host-visible: block;
+      }
+
+      #profile-image {
+        width: var(--profile-image-width, auto);
+        height: var(--profile-image-height, auto);
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+      }
+
+      #banner-image {
+        width: var(--banner-image-width, auto);
+        height: var(--banner-image-height, auto);
+        display: block;
+      }
+
+      /* Scope Indicators for testing local dom, shadow dom, shaddy dom */
+      .scope-indicator img {
+        width: 2rem;
+      }
+
+      #host {
+        display: var(--host-visible, none);
+      }
+
+      #root {
+        display: var(--root-visible, none);
+      }
+
+
+    </style>
+
+    <style include="shared-styles"></style>
+
     <section>
       <h1>Polymer Dart with Shared Styles</h1>
       <h2>Introduction</h2>
@@ -96,11 +59,11 @@
       <h2>Scope Indicators</h2>
       <ul>
         <li id="host" class="scope-indicator">
-          :host <img class="host-visible" src="http://www.yourwebgraphics.com/gallery/data/thumbnails/392/man-with-check-sign-05.png"/>
+          <b class="primary">:host</b>
 
         </li>
         <li id="root" class="scope-indicator">
-          :root <img class="host-visible" src="http://www.yourwebgraphics.com/gallery/data/thumbnails/392/man-with-check-sign-05.png"/>
+          <b class="secondary">:root</b>
         </li>
       </ul>
 
@@ -109,16 +72,16 @@
     <section>
       <h2>Image Sizes</h2>
       <header>
-        <img id="banner-image" src="http://placehold.it/1920x500/ffeedd?text=Banner"/>
-        <div class="overlay">
-          <img id="profile-image" src="http://placehold.it/360?text=Profile"/>
-        </div>
+        <img id="banner-image" src="http://placehold.it/1920x500/446AA3/F7F4A6?text=Banner"/>
+        <div class="overlay"><img id="profile-image" src="http://placehold.it/360/F7F4A6/446AA3?text=Profile"/></div>
       </header>
     </section>
 
     <section>
       <h2>Mixins</h2>
-      <button>Click this button</button>
+      <button>Default</button>
+      <button class="primary">Primary</button>
+      <button class="secondary">Secondary</button>
     </section>
 
   </template>

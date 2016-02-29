@@ -4,13 +4,94 @@
 -->
 
 <dom-module id="shared-styles">
-  <style is="custom-styles">
-    :root {
-      background-color: var(--background-color);
-    }
-  </style>
-  <template>
-    <image-sizes></image-sizes>
-    <app-colors></app-colors>
-  </template>
+
+
+    <style>
+
+      * {
+        color: var(--text-color);
+        line-height: 2rem;
+      }
+      body {
+        background-color: var(--background-color);
+      }
+      section {
+        padding: .75rem;
+        border-bottom: 3px solid var(--text-color);
+      }
+
+      header {
+        position: relative;
+        background-color: var(--text-color, red);
+      }
+
+      h1 {
+        color: var(--brand-color, red);
+      }
+
+      h2 {
+        color: var(--secondary-color);
+      }
+
+      .highlight {
+        color: var(--primary-color);
+      }
+
+      /* Mixins */
+      :host {
+        --button-test: {
+          border: 3px solid;
+          border-radius: 30px;
+          line-height: 2rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          outline: none;
+          text-transform: uppercase;
+          cursor: pointer;
+        };
+      }
+
+      /* Mixin Tests */
+      button {
+        @apply(--button-test);
+        color: var(--text-color);
+        background: transparent;
+        border-color:var(--text-color)
+      }
+
+      button:hover {
+        @apply(--button-test);
+        background: var(--text-color);
+        color: var(--background-color,white);
+      }
+
+      /* Mixin Tests */
+      button.primary {
+        @apply(--button-test);
+        color: var(--primary-color);
+        background: transparent;
+        border-color:var(--primary-color)
+      }
+
+      button.primary:hover {
+        @apply(--button-test);
+        background: var(--primary-color);
+        color: var(--background-color,white);
+      }
+
+      button.secondary {
+        @apply(--button-test);
+        color: var(--secondary-color);
+        background: transparent;
+        border-color:var(--secondary-color)
+      }
+
+      button.secondary:hover {
+        @apply(--button-test);
+        background: var(--secondary-color);
+        color: var(--background-color,white);
+      }
+
+    </style>
+
 </dom-module>

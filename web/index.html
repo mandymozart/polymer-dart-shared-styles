@@ -37,9 +37,32 @@
   <link rel="import" href="packages/polymer_elements/roboto.html">
 
   <link rel="stylesheet" href="styles.css">
+
 </head>
+
+<style is="custom-style">
+  body {
+    background-color: var(--background-color,white);
+  }
+  .github {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+  }
+</style>
 
 <body unresolved>
   <main-app></main-app>
+  <div class="github">
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/porschuetz/polymer-dart-shared-styles/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/porschuetz/polymer-dart-shared-styles/network" data-count-api="/repos/porschuetz/polymer-dart-shared-styles#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork porschuetz/polymer-dart-shared-styles on GitHub">Fork</a>
+
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/porschuetz" data-style="mega" data-count-href="/porschuetz/followers" data-count-api="/users/porschuetz#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @porschuetz on GitHub">Follow @porschuetz</a>
+
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+  </div>
 </body>
 </html>

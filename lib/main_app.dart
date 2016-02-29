@@ -1,12 +1,15 @@
 // Copyright (c) 2016, <WEAREPICTURES>. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 @HtmlImport('main_app.html')
+//@HtmlImport('base_elements/settings.html')
 library polymer_dart_shared_styles.lib.main_app;
+
+import 'dart:js' show JsArray, JsObject;
 
 import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart';
 
-import 'package:polymer_dart_shared_styles/base_elements/shared_styles/shared_styles.dart';
+import 'base_elements/shared_styles/shared_styles.dart';
 //import 'package:polymer_dart_shared_styles/base_elements/image_sizes/image_sizes.dart';
 
 
