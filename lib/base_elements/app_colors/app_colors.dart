@@ -13,7 +13,9 @@ class AppColors extends PolymerElement {
   AppColors.created() : super.created();
 
   attached(){
+    super.attached();
     print('Attached [AppColors]');
+    updateStyles();
   }
 
 }

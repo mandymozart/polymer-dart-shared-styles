@@ -7,6 +7,7 @@ import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart';
 
 import 'package:polymer_dart_shared_styles/base_elements/shared_styles/shared_styles.dart';
+//import 'package:polymer_dart_shared_styles/base_elements/image_sizes/image_sizes.dart';
 
 
 /// Uses [SharedStyles]
@@ -18,9 +19,10 @@ class MainApp extends PolymerElement {
   // Optional lifecycle methods - uncomment if needed.
 
 //  /// Called when an instance of main-app is inserted into the DOM.
-//  attached() {
-//    super.attached();
-//  }
+  attached() {
+    super.attached();
+    updateStyles();
+  }
 
 //  /// Called when an instance of main-app is removed from the DOM.
 //  detached() {

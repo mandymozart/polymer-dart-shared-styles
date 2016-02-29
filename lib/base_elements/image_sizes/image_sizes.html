@@ -5,14 +5,21 @@
 
 <dom-module id="image-sizes">
   <style is="custom-style">
-    :root {
+    :host {
       /* Banner Image */
-      --banner-image-height: 15vw;
+      --banner-image-height: 100px;
       --banner-image-width: 100%;
 
       /* Profile Image */
       --profile-image-height: 10vw;
       --profile-image-width: 10vw;
     }
+    img {
+      height: var(--banner-image-height);
+      width: var(--banner-image-width);
+    }
   </style>
+  <template>
+    <img src="http://placehold.it/10x10/ffff00"/>
+  </template>
 </dom-module>

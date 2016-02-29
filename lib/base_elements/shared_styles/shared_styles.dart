@@ -7,7 +7,7 @@ import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart';
 
 import 'package:polymer_dart_shared_styles/base_elements/app_colors/app_colors.dart';
-import 'package:polymer_dart_shared_styles/base_elements/image_sizes/image_sizes.dart';
+//import 'package:polymer_dart_shared_styles/base_elements/image_sizes/image_sizes.dart';
 
 /// Shared Styles imports all styles used in the App. This is equivalent to your
 /// main SCSS or CSS file.
@@ -17,7 +17,7 @@ import 'package:polymer_dart_shared_styles/base_elements/image_sizes/image_sizes
 class SharedStyles extends PolymerElement {
   SharedStyles.created() : super.created();
 
-  attached(){
+  ready(){
     print('Attached [SharedStyles]');
   }
 }
