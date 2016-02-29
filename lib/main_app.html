@@ -42,11 +42,8 @@
     }
 
     /* Scope Indicators for testing local dom, shadow dom, shaddy dom */
-    .scope-indicator {
-      background: red;
-      color: white;
-      font-size: 2rem;
-      line-height: 2rem;
+    .scope-indicator img {
+      width: 2rem;
     }
 
     #host {
@@ -97,12 +94,16 @@
 
     <section>
       <h2>Scope Indicators</h2>
-      <div id="host" class="scope-indicator">
-        :host is accessable
-      </div>
-      <div id="root" class="scope-indicator">
-        :root is accessable
-      </div>
+      <ul>
+        <li id="host" class="scope-indicator">
+          :host <img class="host-visible" src="http://www.yourwebgraphics.com/gallery/data/thumbnails/392/man-with-check-sign-05.png"/>
+
+        </li>
+        <li id="root" class="scope-indicator">
+          :root <img class="host-visible" src="http://www.yourwebgraphics.com/gallery/data/thumbnails/392/man-with-check-sign-05.png"/>
+        </li>
+      </ul>
+
     </section>
 
     <section>
